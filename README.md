@@ -15,10 +15,10 @@
 
 Версии. 
 -----------------------------------------------------------------------------------------
-SDK: java version "11.0.18"
-Language level: 17 - Sealed types, always-strict floating-point semantics
-org.springframework.boot 2.7.14
-lombok
+SDK: java version "11.0.18"  
+Language level: 17 - Sealed types, always-strict floating-point semantics  
+org.springframework.boot 2.7.14  
+lombok  
 
 Как работает приложение.
 -----------------------------------------------------------------------------------------
