@@ -202,6 +202,36 @@ GET /directors
 
 ![https://avatars1.githubusercontent.com/u/5384215?v=3&s=460](https://github.com/Ksenni888/CheckBrackets/blob/main/photo_2023-10-18_10-30-54.jpg)
 
+Примеры запросов для работы с базой данных.
+
+1. Отобразить всех пользователей:
+```
+SELECT (*)
+FROM users;
+```
+
+2. Отобразить названия фильмов жанра "Ужас":
+```
+SELECT films.name
+FROM films
+WHERE films.film_id = (SELECT genre_film.film_id
+                 FROM genre_film
+                 WHERE genre_id = (SELECT genre_id
+                                   FROM genres
+                                   WHERE name = 'Ужас')) AS film_horror;               
+```
+
+3. Отобразить все фильмы:
+```
+SELECT (*)  
+FROM films;
+```
+
+4. Отобразить существующие жанры фильмов:
+```
+SELECT name  
+FROM genres
+```
 
 # Над приложением работали.
 ![Static Badge](https://img.shields.io/badge/%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9%20%D0%97%D0%BE%D0%BB%D0%BE%D1%82%D1%83%D1%85%D0%B8%D0%BD%20%20%F0%9F%90%B0%20-%20green)
